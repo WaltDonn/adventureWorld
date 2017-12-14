@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title><%= title %></title>
+  	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  	<!--<script type="text/javascript" src="../code.js"> </script>-->
+  	<script>
+  		$(document).ready( function(){
+			$("#submit_1").click(function(){
+				let the_url = "stuff";
+				$.ajax({
+				    url: the_url,
+				    data: {"name" : $("#input1").val(), "race" : $("#input2").val(), "class" : $("#input3").val(), "password" : $("#input9").val()},
+				    type: 'PUT',
+				    success: function(result) {
+				      $("#input1").val("");
+				      $("#input2").val("");
+				      $("#input3").val("");
+				      $("#input9").val("");
+				    }
+		   		});
+		   	});
+		   	$("#submit_2").click(function() {
+				let the_url = "stuff";
+				$.ajax({
+				    url: the_url,
+				    data: {"name" : $("#input4").val()},
+				    type: 'GET',
+				    success: function(result) {
+				      $("#input4").val("");
+				      $("#responseArea1").html(result);
+				    }
+		   		});
+			});
+			$("#submit_3").click(function() {
+				let the_url = "stuff";
+				$.ajax({
+				    url: the_url,
+				    data: { "find" : {"name" : $("#input5").val()},
+				    	   "update" : {"$set" : 
+				    			{"race" : $("#input6").val(), "class" : $("#input7").val()}
+				    		}
+				    	  },  
+				    type: 'POST',
+				    success: function(result) {
+				      $("#input5").val("");
+				      $("#input6").val("");
+				      $("#input7").val("");
+				    }
+		   		});
+			});
+			$("#submit_4").click(function(){
+				let the_url = "stuff";
+				$.ajax({
+				    url: the_url,
+				    data: {"name" : $("#input8").val()},
+				    type: 'DELETE',
+				    success: function(result) {
+				      $("#input8").val("");
+				    }
+		   		});
+			});
+		});
+   	</script>
+  </head>
+  <body>
+  	<p>Create a new character!</p>
+  	Enter character name: <input type="text" id="input1" value=""/><br>
+  	Enter character race: <input type="text" id="input2" value=""/><br>
+  	Enter character class: <input type="text" id="input3" value=""/><br>
+  	Enter password: <input type="text" id="input9" value=""/><br>
+  	<button type="button" id="submit_1">Submit</button><br>
+  	<br>
+
+  	<p>Find a character by name!</p>
+  	Enter character name: <input type="text" id="input4" value=""/><br>
+  	<button type="button" id="submit_2">Submit</button><br>
+  	<div id="responseArea1"></div>
+  	<br>
+
+  	<p>Update a character!</p>
+  	Enter character name: <input type="text" id="input5" value=""/><br>
+  	Enter character race: <input type="text" id="input6" value=""/><br>
+  	Enter character class: <input type="text" id="input7" value=""/><br>
+  	<button type="button" id="submit_3">Submit</button><br>
+  	<br>
+
+  	<p>Delete a character!</p>
+  	Enter character name: <input type="text" id="input8" value=""/><br>
+  	<button type="button" id="submit_4">Submit</button><br>
+  	<br>
+
+  </body>
+</html>

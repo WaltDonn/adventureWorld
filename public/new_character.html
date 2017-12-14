@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Register</title>
+  	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  	<script>
+  		$(document).ready( function(){
+			$("#submit_1").click(function(){
+				let the_url = "stuff";
+				$.ajax({
+				    url: the_url,
+				    data: {"name" : $("#input1").val(), "race" : $("#input2").val(), "class" : $("#input3").val(), "password" : $("#input9").val()},
+				    type: 'PUT',
+				    success: function(result) {
+				      $("#input1").val("");
+				      $("#input2").val("");
+				      $("#input3").val("");
+				      $("#input9").val("");
+				    }
+		   		});
+		   	});
+		});
+   	</script>
+   	<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+   	<link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+  	<center>
+	  	<div class="header">
+	        <h2>Adventure World! - Register New User</h2>
+	    </div>
+	  	<p>Create a new character!</p>
+	  	Enter character name: <input type="text" id="input1" value=""/><br>
+	  	Choose character race: <select id="input2" name="Race">
+		  <option value="Human">Human</option>
+		  <option value="Elf">Elf</option>
+		  <option value="Dwarf">Dwarf</option>
+		  <option value="Dragonborn">Dragonborn</option>
+		</select><br>
+	  	Choose character class: <select id="input3" name="Class">
+		  <option value="Wizard">Wizard</option>
+		  <option value="Knight">Knight</option>
+		  <option value="Rogue">Rogue</option>
+		  <option value="Cleric">Cleric</option>
+		</select><br>
+	  	Create password: <input type="text" id="input9" value=""/><br>
+	  	<button type="button" id="submit_1" onclick="location.href='./login.html'">Submit</button><br>
+	  	<br>
+	</center>
+
+  </body>
+</html>

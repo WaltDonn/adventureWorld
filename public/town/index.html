@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Town</title>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="../javascripts/clientSocket.js"></script>
+		<link rel="stylesheet" type="text/css" href="../styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+	</head>
+	<body><center>
+		<div class="header">
+        	<h2>Town</h2>
+    	</div>
+		<div class="center">
+			<div class="header2">
+        		<h3>Kingdom Status</h3>
+    		</div>
+			Good/Evil: <p id="gePlace">0</p>
+			Fame:      <p id="famePlace">0</p>
+			Fortune:   <p id="fortPlace">0</p><br>
+			<div class="header2">
+        		<h3>Leave Town</h3>
+    		</div>
+			<form action="/logout" method="get">
+				<div>
+				    <input type="submit" value="Log Out"/>
+				</div>
+			</form>
+		</div>
+
+		<div class="left">
+			<div class="header2">
+        		<h3>Adventures</h3>
+    		</div>
+			<a href="/adv1/i.html" id="adv1">Adventure 1: The Sickness</a><br>
+			<a href="/adv2/i.html" id="adv2">Adventure 2: The Grand Tournament</a><br>
+			<a href="/adv3/i.html" id="adv3">Adventure 3: The Maze</a><br>
+			<a href="/adv4/i.html" id="adv4">Adventure 4: Rise of the Rats</a><br>
+			<a href="/adv5/i.html" id="adv5">Adventure 5: The Golden Sword</a><br>
+			<a href="/adv6/i.html" id="adv6">Adventure 6: The Dark Throne</a><br>
+			<a href="/adv7/i.html" id="adv7">Adventure 7: The Dragon of Ice</a><br>
+			<a href="/adv8/i.html" id="adv8">Adventure 8: The City of Death</a><br>
+			<a href="/adv9/i.html" id="adv9">Adventure 9: Thieves of Honor</a><br>
+			<a href="/adv10/i.html" id="adv10">Adventure 10: The Key and Shield</a><br>
+		</div>
+
+		<div class="right">
+			<div class="header2">
+        		<h3>Tavern</h3>
+    		</div>
+			<div id="nameStuff">
+				Enter a display name to begin messaging:
+				<br>
+				<input type="text" id="name_input" value=""/>
+				<br>
+				<br>
+				<button onclick="nameSubmit()" type="button" id="submit_button2">Submit</button><br>
+			</div>
+			<br>
+			<div id="messageStuff">
+				Message:
+				<br>
+				<input type="text" id="input_area" value=""/><br>
+				<button onclick="buttonClicked()" type="button" id="submit_button">Submit</button>
+				<br>
+				<br>
+			</div>
+			<p id="displayArea"></p>
+		</div>
+
+      
+  </form>
+		
+	</center></body>
+</html>

@@ -1,0 +1,37 @@
+
+.header{
+    background-color: #D3D3D3;
+    padding-top: .05%;
+    padding-bottom: .05%;
+    margin-bottom: 1%;
+    font-family: 'Spectral SC', serif;
+}
+.header2{
+    background-color: #D3D3D3;
+    padding-top: .001%;
+    padding-bottom: .001%;
+    margin-bottom: 1%;
+    font-family: 'Spectral SC', serif;
+}
+.left {
+    float: left;
+    display: inline-block;
+    width: 15%;
+}
+.center {
+    float: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.right {
+    float: right;
+    width: 15%;
+    padding-top: 1%;
+    display: inline-block;
+}
+.adv {
+    float: center;
+    padding-right: 20%;
+    padding-left: 20%;
+}
