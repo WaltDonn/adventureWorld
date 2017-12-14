@@ -1,0 +1,2 @@
+# adventureWorld
+I have created a single-player/multiplayer game for my distributed application. Users need to create an account and log into the account in order to participate. The users have a list of choose-your-own-adventure text-based games, and the decisions they make in the games affects the kingdom all the players exist in. The kingdom’s stats determine what adventures are available to be played, and in order to access other adventures the players need to make decisions that change the kingdom’s stats
